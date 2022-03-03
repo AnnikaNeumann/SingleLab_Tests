@@ -21,4 +21,6 @@ class TaskTest(unittest.TestCase):
 #CLEAN WINDOWS VS COOK DINNER
     def test_cook_dinner_preferred_clean_windows(self):
         self.assertEqual(True, Tasks.task_decider(self.cook_dinner, self.clean_windows))
+    def test_clean_windows_not_preferred_cook_dinner(self):
+        self.assertEqual(False, Tasks.task_decider(self.clean_windows, self.cook_dinner))
 
