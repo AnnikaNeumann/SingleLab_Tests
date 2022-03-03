@@ -48,5 +48,14 @@ class TaskTest(unittest.TestCase):
 
     def test_clothes_preferred_dinner(self):
         self.assertEqual(True, Tasks.task_decider(self.wash_clothes, self.cook_dinner))
+    def test_dinner_not_preferred_clothes(self):
+        self.assertEqual(False, Tasks.task_decider(self.cook_dinner, self.wash_clothes))
+
+#DO IRONING VS WASH DISHES
+
+    def test_ironing_preferred_dishes(self):
+        self.assertEqual(True, Tasks.task_decider(self.do_ironing, self.wash_dishes))
+    def test_dishes_not_preferred_ironing(self):
+        self.assertEqual(False, Tasks.task_decider(self.wash_dishes, self.do_ironing))
 
 

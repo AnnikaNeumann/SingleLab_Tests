@@ -15,13 +15,13 @@ class Tasks:
                 return False
         
         if current_task.description == "cook dinner":
-            if compared_task == "wash dishes":
+            if compared_task == "wash dishes" or compared_task == "wash clothes":
                 return False
             else:
                 return True
 
         if current_task.description == "clean windows":
-            if compared_task == "wash dishes":
+            if compared_task == "wash dishes" or compared_task == "do ironing":
                 return True
             else:
                 return False
@@ -33,9 +33,10 @@ class Tasks:
                 return True
 
         if current_task.description == "do ironing":
-            if compared_task == "wash clothes":
+            if compared_task == "wash clothes" or compared_task == "wash dishes":
                 return True
             else:
                 return False
 
+        
 
