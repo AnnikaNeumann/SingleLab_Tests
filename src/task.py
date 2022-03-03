@@ -6,20 +6,22 @@ class Tasks:
 
 
     def task_decider(current_task, compared_to_task):
+
+        compared_task = compared_to_task.description
         if current_task.description == "wash dishes":
-            if compared_to_task.description == "cook dinner":
+            if compared_task == "cook dinner" or compared_task == "wash clothes":
                 return True
             else: 
                 return False
         
         if current_task.description == "cook dinner":
-            if compared_to_task.description == "wash dishes":
+            if compared_task == "wash dishes":
                 return False
             else:
                 return True
 
         if current_task.description == "clean windows":
-            if compared_to_task.description == "wash dishes":
+            if compared_task== "wash dishes":
                 return True
             else:
                 return False
