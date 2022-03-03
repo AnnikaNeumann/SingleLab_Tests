@@ -18,4 +18,12 @@ class Tasks:
             else:
                 return True
 
+        if current_task.description == "clean windows":
+            if compared_to_task.description == "wash dishes":
+                return True
+            else:
+                return False
+
+        
+
 
