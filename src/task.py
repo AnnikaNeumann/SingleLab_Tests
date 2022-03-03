@@ -21,11 +21,21 @@ class Tasks:
                 return True
 
         if current_task.description == "clean windows":
-            if compared_task== "wash dishes":
+            if compared_task == "wash dishes":
                 return True
             else:
                 return False
 
-        
+        if current_task.description == "wash clothes":
+            if compared_task == 'wash dishes' or compared_task == "do ironing":
+                return False
+            else:
+                return True
+
+        if current_task.description == "do ironing":
+            if compared_task == "wash clothes":
+                return True
+            else:
+                return False
 
 
